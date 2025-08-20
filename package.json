@@ -14,9 +14,30 @@
     "build:frontend": "npm run build --workspace=frontend",
     "build": "npm run build:backend && npm run build:frontend",
     "start:backend": "npm run start:prod --workspace=backend",
-    "start:frontend": "npm run start --workspace=frontend"
+    "start:frontend": "npm run start --workspace=frontend",
+    "test": "vitest",
+    "test:backend": "npm run test --workspace=backend",
+    "test:frontend": "npm run test --workspace=frontend",
+    "test:all": "npm run test:backend && npm run test:frontend",
+    "lint": "eslint . --fix",
+    "format": "prettier --write ."
   },
   "keywords": ["nest", "remix", "fullstack"],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.7",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.2",
+    "globals": "^16.0.0",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0",
+    "vitest": "^2.1.8",
+    "@vitest/coverage-v8": "^2.1.8"
+  }
 }
