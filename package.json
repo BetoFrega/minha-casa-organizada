@@ -1,0 +1,22 @@
+{
+  "name": "minha-casa-organizada",
+  "version": "1.0.0",
+  "description": "Casa organizada com backend e frontend",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "npm run start:dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build:backend": "npm run build --workspace=backend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "build": "npm run build:backend && npm run build:frontend",
+    "start:backend": "npm run start:prod --workspace=backend",
+    "start:frontend": "npm run start --workspace=frontend"
+  },
+  "keywords": ["nest", "remix", "fullstack"],
+  "author": "",
+  "license": "ISC"
+}
